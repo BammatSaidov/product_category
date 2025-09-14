@@ -1,12 +1,12 @@
-#Product Category PySpark Library
+Product Category PySpark Library
 
 Библиотека для PySpark, возвращающая все пары «Продукт – Категория» и продукты без категорий.
 Позволяет обрабатывать продукты, которые могут иметь несколько категорий или не иметь ни одной.
 
-#Установка
+Установка
 pip install -e .
 
-#Пример использования
+Пример использования
 from pyspark.sql import SparkSession
 from product_category.product_category_pairs import product_category_pairs
 
@@ -31,5 +31,5 @@ product_categories = spark.createDataFrame([
 result = product_category_pairs(products, categories, product_categories)
 result.show()
 
-#Тесты
+Тесты
 pytest tests/
